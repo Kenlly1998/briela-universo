@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIELA — Un universo que se vive</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 50%, #0a1628 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #fff, #60a5fa, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #93c5fd;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .sky {
+            position: relative;
+            height: 70vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite ease-in-out;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .star:hover {
+            transform: scale(2.5);
+            box-shadow: 0 0 15px #fff, 0 0 30px #60a5fa;
+        }
+        .star.named {
+            width: 6px;
+            height: 6px;
+            background: #38bdf8;
+            box-shadow: 0 0 8px #38bdf8;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        .constellation-info {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 16px;
+            padding: 16px 24px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .constellation-info h3 {
+            color: #bfdbfe;
+            margin-bottom: 6px;
+            font-weight: 400;
+        }
+        .constellation-info p {
+            color: #93c5fd;
+            font-size: 0.9rem;
+        }
+        .experiences {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .experiences h2 {
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #bfdbfe;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            background: rgba(96, 165, 250, 0.1);
+            transform: translateY(-4px);
+        }
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .card p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .cta {
+            text-align: center;
+            padding: 50px 20px 70px;
+        }
+        .cta button {
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            color: #0a1628;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .cta button:hover {
+            transform: scale(1.05);
+        }
+        .note {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.85rem;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BRIELA</h1>
+        <p>Un universo que se vive, no solo se escucha</p>
+    </div>
+
+    <div class="sky" id="sky">
+        <div class="constellation-info">
+            <h3>El cielo de Briela</h3>
+            <p>Cada estrella es un fan. Juntos forman constelaciones.</p>
+        </div>
+    </div>
+
+    <div class="experiences">
+        <h2>Experiencias especiales</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>✦ Dentro de una canción</h3>
+                <p>Entra en la historia de cada tema: cómo nació, notas de voz de Briela e imágenes del estudio.</p>
+            </div>
+            <div class="card">
+                <h3>✦ Conciertos que se iluminan</h3>
+                <p>Escanea el QR en el show y vive una experiencia visual sincronizada con el escenario.</p>
+            </div>
+            <div class="card">
+                <h3>✦ Cartas que florecen</h3>
+                <p>Escribe mensajes que Briela puede elegir compartir. Tus palabras se vuelven parte del universo.</p>
+            </div>
+            <div class="card">
+                <h3>✦ Mi historia con Briela</h3>
+                <p>Tu álbum digital personal: canciones favoritas, conciertos a los que fuiste y recuerdos guardados.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <button>Formar parte del universo</button>
+    </div>
+
+    <div class="note">
+        Página de muestra — Concepto visual. No es una aplicación desarrollada.
+    </div>
+
+    <script>
+        const sky = document.getElementById('sky');
+        const starCount = 120;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            if (Math.random() > 0.75) star.classList.add('named');
+            
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 80 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDuration = (2 + Math.random() * 3) + 's';
+            
+            star.title = star.classList.contains('named') ? 'Estrella de un fan' : '';
+            sky.appendChild(star);
+        }
+    </script>
+</body>
+</html>
